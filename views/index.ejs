@@ -1,0 +1,36 @@
+<div class="author">
+  <h1 class="author__heading">Hi, We are Pmarcel Academy.</h1>
+  <p class="author__body">A home of Web developers and aspiring ones,<br><span class="author__body" style="text-decoration: none;"><a href="/post/67606d3162c143a5b9f58803">Read more</a></span>
+  </p>
+</div>
+
+
+<img src="/img/code.png" alt="person looking out through window" class="hero-image" width="981" height="528">
+
+<section class="articles">
+  <h2 class="articles__heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+      <li>
+        <a href="/post/<%= post._id %>">
+          <span><%= post.title %></span>
+          <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+
+
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+  <% } %>
+ 
+
+  
+
+
+
+</section>
+
+<!-- you are warmly welcome to our academy blog, our goal is to make learning of web/app development skill easy and accessible to everyone of educational background and profession and country so you can make a living with your tech skill and can also build real life applications for others to use, we are an online academy because we want to be able to fix learning to everyone of any background schedule, stick with us, read our articles and refer us to your friends and family get to know us by attending our free basics general classes -->
